@@ -2,7 +2,7 @@
 
 namespace Aoeng\Laravel\Admin\Version\Admin\Controllers;
 
-use App\Models\Version;
+use Aoeng\Laravel\Admin\Version\Models\Version;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
