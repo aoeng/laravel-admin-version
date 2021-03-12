@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 
 /**
- * @group APP版本
+ * @group 软件版本管理 VersionController
  * Class VersionController
  * @package App\Http\Controllers
  */
@@ -17,7 +17,7 @@ class VersionController extends Controller
     use ResponseJsonActions;
 
     /**
-     * 最新APP version_index
+     * 最新版本 VersionController_index
      * @return JsonResponse
      */
     public function index()
