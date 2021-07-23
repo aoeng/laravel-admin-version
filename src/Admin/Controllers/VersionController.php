@@ -26,6 +26,7 @@ class VersionController extends AdminController
     {
         $grid = new Grid(new Version());
 
+        $grid->model()->orderByDesc('published_at');
         $grid->column('id', __('Id'));
         $grid->column('name', '版本名称');
         $grid->column('version', '版本号');
@@ -72,8 +73,8 @@ class VersionController extends AdminController
         $form = new Form(new Version());
 
         $form->text('name', '版本名称')->required();
-        $form->number('version', '版本名号')->required();
-        $form->select('type','更新类型')->options(Version::$typeMap);
+        $form->text('version', '版本名号')->required();
+        $form->select('type', '更新类型')->options(Version::$typeMap)->default(1);
         $form->file('update_link', '更新地址')->required();
         $form->apk('download_link', '下载地址')->required();
         $form->textarea('content', '更新内容')->required();
