@@ -75,7 +75,7 @@ class VersionController extends AdminController
         $form->text('name', '版本名称')->required();
         $form->text('version', '版本名号')->required();
         $form->select('type', '更新类型')->options(Version::$typeMap)->default(1);
-        $form->file('update_link', '更新地址')->required();
+        $form->fileBox('update_link', '更新地址')->required();
         $form->apk('download_link', '下载地址')->required();
         $form->textarea('content', '更新内容')->required();
         $form->datetime('published_at', '发布时间')->default(date('Y-m-d H:i:s'));
